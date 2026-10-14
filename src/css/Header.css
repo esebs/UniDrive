@@ -30,8 +30,9 @@
 }
 
 .sync-message {
+  display: none;
   font-style: italic;
-  border: 1px solid var(--text);
+  border: none;
   background: none;
   color: var(--text);
   margin-right: 20px;
@@ -70,4 +71,10 @@
 
 .toggle-theme:hover { 
   background-color: var(--text);
+}
+
+@media (min-width:870px) {
+  .sync-message {
+    display: inline;
+  }
 }

@@ -5,7 +5,8 @@ import '../css/FileList.css';
 
 export default function LooseFileList(props) {
   const {
-    looseFileList, moveExternal, moveWithin, refreshFunc, shareFile, userId,
+    email, looseFileList, moveExternal, moveWithin, refreshFunc,
+    shareFile, userId,
   } = props;
 
   return (
@@ -15,6 +16,7 @@ export default function LooseFileList(props) {
           key={file.id}
           userId={userId}
           data={file}
+          email={email}
           moveExternal={moveExternal}
           shareFile={shareFile}
           moveWithin={moveWithin}
@@ -27,6 +29,7 @@ export default function LooseFileList(props) {
 }
 
 LooseFileList.propTypes = {
+  email: PropTypes.string.isRequired,
   looseFileList: PropTypes.arrayOf(PropTypes.object).isRequired,
   moveExternal: PropTypes.func.isRequired,
   moveWithin: PropTypes.func.isRequired,

@@ -83,7 +83,6 @@ class OpenFolder extends Component {
           ))}
         </div>
       </div>
-
     );
   }
 }
